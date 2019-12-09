@@ -1,0 +1,241 @@
+﻿<Window x:Name="jobPacketWindow" x:Class="Job_Packet_Design.JobPacketForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Job_Packet_Design"
+        mc:Ignorable="d"
+        Title="JobPacketForm" Height="820
+        " Width="1130" ResizeMode="NoResize" MouseLeftButtonDown="JobPacketWindow_Drag" BorderThickness="20" Background="#FFFFD57A" AllowsTransparency="True" WindowStyle="None">
+    <Window.Effect>
+        <DropShadowEffect ShadowDepth="10" BlurRadius="20" Opacity="0.75"/>
+    </Window.Effect>
+    <Grid>
+        <Rectangle HorizontalAlignment="Left" Height="310" Margin="790,180,0,0" VerticalAlignment="Top" Width="286" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.Effect>
+                <BlurEffect Radius="10"/>
+            </Rectangle.Effect>
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <LinearGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                            <RotateTransform Angle="-99.224" CenterY="0.5" CenterX="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="#FFFFD57A" Offset="1"/>
+                    <GradientStop Color="#FFB4944F" Offset="0.844"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="1.331"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Grid x:Name="LabelGrid" HorizontalAlignment="Left" Height="522" Margin="24,43,0,0" VerticalAlignment="Top" Width="753" Background="White">
+            <TextBlock x:Name="jobCaptainTextBlock" HorizontalAlignment="Left" Margin="12,8,0,0" TextWrapping="Wrap" Text="Job Captain" VerticalAlignment="Top" FontFamily="Arial" FontWeight="Bold"/>
+            <TextBlock x:Name="jobCaptainTextBlock_output" HorizontalAlignment="Left" Margin="113,10,0,0" TextWrapping="Wrap" Text="XX" VerticalAlignment="Top" FontFamily="Arial"/>
+            <TextBlock x:Name="jobNumberTextBlock" HorizontalAlignment="Left" Margin="12,22,0,0" TextWrapping="Wrap" Text="Job Number" VerticalAlignment="Top" FontFamily="Arial" FontWeight="Bold"/>
+            <TextBlock x:Name="jobNumberTextBlock_output" HorizontalAlignment="Left" Margin="113,26,0,0" TextWrapping="Wrap" Text="98765" VerticalAlignment="Top" FontFamily="Arial" FontSize="24" FontWeight="Bold"/>
+            <TextBlock x:Name="jobNameTextBlock" HorizontalAlignment="Left" Margin="12,57,0,0" TextWrapping="Wrap" Text="Job Name" VerticalAlignment="Top" FontFamily="Arial" FontWeight="Bold"/>
+            <TextBlock x:Name="jobNameTextBlock_output" HorizontalAlignment="Left" Margin="113,57,0,0" TextWrapping="Wrap" Text="Wollondilly Shire Council Hall, Picton" VerticalAlignment="Top" FontFamily="Arial"/>
+            <TextBlock x:Name="jobDescriptionTextBlock" HorizontalAlignment="Left" Margin="12,71,0,0" TextWrapping="Wrap" Text="Job Description" VerticalAlignment="Top" FontFamily="Arial" FontWeight="Bold"/>
+            <TextBlock x:Name="jobDescriptionTextBlock_output" HorizontalAlignment="Left" Margin="113,71,0,0" TextWrapping="Wrap" Text="Survey of Existing Heritage Building" VerticalAlignment="Top" FontFamily="Arial"/>
+            <TextBlock x:Name="jobProjectInfoTextBlock" HorizontalAlignment="Left" Margin="12,90,0,0" TextWrapping="Wrap" Text="Job/Project Information" VerticalAlignment="Top" FontFamily="Arial" FontWeight="Bold" Background="#FFDEDEDE" Width="308" TextAlignment="Center"/>
+            <TextBlock x:Name="clientInfoTextBlock" Margin="326,90,10,0" TextWrapping="Wrap" Text="Client Information" VerticalAlignment="Top" FontFamily="Arial" FontWeight="Bold" Background="#FFDEDEDE" TextAlignment="Center"/>
+            <TextBlock x:Name="jobStatusTextBlock" HorizontalAlignment="Left" Margin="10,109,0,0" TextWrapping="Wrap" Text="Job Status" VerticalAlignment="Top" FontFamily="Arial" FontWeight="Bold"/>
+            <TextBlock x:Name="quotedTextBlock" HorizontalAlignment="Left" Margin="10,126,0,0" TextWrapping="Wrap" Text="Quoted" VerticalAlignment="Top" FontFamily="Arial" FontWeight="Bold"/>
+            <TextBlock x:Name="subCaptainTextBlock" HorizontalAlignment="Left" Margin="10,143,0,0" TextWrapping="Wrap" Text="Sub-Captain" VerticalAlignment="Top" FontFamily="Arial" FontWeight="Bold"/>
+            <TextBlock x:Name="jobDateTextBlock" HorizontalAlignment="Left" Margin="10,161,0,0" TextWrapping="Wrap" Text="Job Date" VerticalAlignment="Top" FontFamily="Arial" FontWeight="Bold"/>
+            <TextBlock x:Name="expectedTextBlock" HorizontalAlignment="Left" Margin="10,177,0,0" TextWrapping="Wrap" Text="Expected" VerticalAlignment="Top" FontFamily="Arial" FontWeight="Bold"/>
+            <TextBlock x:Name="startDateTextBlock" HorizontalAlignment="Left" Margin="10,194,0,0" TextWrapping="Wrap" Text="Start Date" VerticalAlignment="Top" FontFamily="Arial" FontWeight="Bold"/>
+            <TextBlock x:Name="endDateTextBlock" HorizontalAlignment="Left" Margin="10,211,0,0" TextWrapping="Wrap" Text="End Date" VerticalAlignment="Top" FontFamily="Arial" FontWeight="Bold"/>
+            <TextBlock x:Name="packetRefTextBlock" HorizontalAlignment="Left" Margin="10,229,0,0" TextWrapping="Wrap" Text="Packet Ref:" VerticalAlignment="Top" FontFamily="Arial" FontWeight="Bold"/>
+            <TextBlock x:Name="dPTextBlock" HorizontalAlignment="Left" Margin="10,247,0,0" TextWrapping="Wrap" Text="DP" VerticalAlignment="Top" FontFamily="Arial" FontWeight="Bold"/>
+            <TextBlock x:Name="lotTextBlock" HorizontalAlignment="Left" Margin="10,282,0,0" TextWrapping="Wrap" Text="Lot" VerticalAlignment="Top" FontFamily="Arial" FontWeight="Bold"/>
+            <TextBlock x:Name="streetNumberTextBlock" HorizontalAlignment="Left" Margin="10,299,0,0" TextWrapping="Wrap" Text="Street Number" VerticalAlignment="Top" FontFamily="Arial" FontWeight="Bold"/>
+            <TextBlock x:Name="streetNameTextBlock" HorizontalAlignment="Left" Margin="10,317,0,0" TextWrapping="Wrap" Text="Street Name" VerticalAlignment="Top" FontFamily="Arial" FontWeight="Bold"/>
+            <TextBlock x:Name="suburbTextBlock" HorizontalAlignment="Left" Margin="10,350,0,0" TextWrapping="Wrap" Text="Suburb" VerticalAlignment="Top" FontFamily="Arial" FontWeight="Bold"/>
+            <TextBlock x:Name="reTextBlock" HorizontalAlignment="Left" Margin="10,367,0,0" TextWrapping="Wrap" Text="RE" VerticalAlignment="Top" FontFamily="Arial" FontWeight="Bold"/>
+            <TextBlock x:Name="ParishTextBlock" HorizontalAlignment="Left" Margin="10,384,0,0" TextWrapping="Wrap" Text="Parish" VerticalAlignment="Top" FontFamily="Arial" FontWeight="Bold"/>
+            <TextBlock x:Name="countyTextBlock" HorizontalAlignment="Left" Margin="10,402,0,0" TextWrapping="Wrap" Text="County" VerticalAlignment="Top" FontFamily="Arial" FontWeight="Bold"/>
+            <TextBlock x:Name="localGovtTextBlock" HorizontalAlignment="Left" Margin="10,417,0,0" TextWrapping="Wrap" Text="Local Govt" VerticalAlignment="Top" FontFamily="Arial" FontWeight="Bold"/>
+            <TextBlock x:Name="specialDetailsTextBlock" Margin="12,436,10,0" TextWrapping="Wrap" Text="Special Details" VerticalAlignment="Top" FontFamily="Arial" FontWeight="Bold" Background="#FFDEDEDE"/>
+            <TextBlock x:Name="jobStatusTextBlock_output" HorizontalAlignment="Left" Margin="99,109,0,0" TextWrapping="Wrap" Text="Job Status" VerticalAlignment="Top" FontFamily="Arial"/>
+            <TextBlock x:Name="quotedTextBlock_output" HorizontalAlignment="Left" Margin="99,126,0,0" TextWrapping="Wrap" Text="Quoted" VerticalAlignment="Top" FontFamily="Arial"/>
+            <TextBlock x:Name="subCaptainTextBlock_output" HorizontalAlignment="Left" Margin="99,143,0,0" TextWrapping="Wrap" Text="Sub-Captain" VerticalAlignment="Top" FontFamily="Arial"/>
+            <TextBlock x:Name="jobDateTextBlock_output" HorizontalAlignment="Left" Margin="99,161,0,0" TextWrapping="Wrap" Text="Job Date" VerticalAlignment="Top" FontFamily="Arial"/>
+            <TextBlock x:Name="expectedTextBlock_output" HorizontalAlignment="Left" Margin="99,177,0,0" TextWrapping="Wrap" Text="Expected" VerticalAlignment="Top" FontFamily="Arial"/>
+            <TextBlock x:Name="startDateTextBlock_output" HorizontalAlignment="Left" Margin="99,194,0,0" TextWrapping="Wrap" Text="Start Date" VerticalAlignment="Top" FontFamily="Arial"/>
+            <TextBlock x:Name="endDateTextBlock_output" HorizontalAlignment="Left" Margin="99,211,0,0" TextWrapping="Wrap" Text="End Date" VerticalAlignment="Top" FontFamily="Arial"/>
+            <TextBlock x:Name="packetRefTextBlock_output" HorizontalAlignment="Left" Margin="99,229,0,0" TextWrapping="Wrap" Text="Packet Ref:" VerticalAlignment="Top" FontFamily="Arial"/>
+            <TextBlock x:Name="dPTextBlock_output" HorizontalAlignment="Left" Margin="99,247,0,0" TextWrapping="Wrap" Text="DP" VerticalAlignment="Top" FontFamily="Arial" Width="218" Height="35"/>
+            <TextBlock x:Name="lotTextBlock_output" HorizontalAlignment="Left" Margin="99,282,0,0" TextWrapping="Wrap" Text="Lot" VerticalAlignment="Top" FontFamily="Arial"/>
+            <TextBlock x:Name="streetNumberTextBlock_output" HorizontalAlignment="Left" Margin="99,299,0,0" TextWrapping="Wrap" Text="Street Number" VerticalAlignment="Top" FontFamily="Arial"/>
+            <TextBlock x:Name="streetNameTextBlock_output" HorizontalAlignment="Left" Margin="99,317,0,0" TextWrapping="Wrap" Text="Street Name" VerticalAlignment="Top" FontFamily="Arial"/>
+            <TextBlock x:Name="suburbTextBlock_output" HorizontalAlignment="Left" Margin="99,350,0,0" TextWrapping="Wrap" Text="Suburb" VerticalAlignment="Top" FontFamily="Arial"/>
+            <TextBlock x:Name="reTextBlock_output" HorizontalAlignment="Left" Margin="99,367,0,0" TextWrapping="Wrap" Text="RE" VerticalAlignment="Top" FontFamily="Arial"/>
+            <TextBlock x:Name="ParishTextBlock_output" HorizontalAlignment="Left" Margin="99,384,0,0" TextWrapping="Wrap" Text="Parish" VerticalAlignment="Top" FontFamily="Arial"/>
+            <TextBlock x:Name="countyTextBlock_output" HorizontalAlignment="Left" Margin="99,402,0,0" TextWrapping="Wrap" Text="County" VerticalAlignment="Top" FontFamily="Arial"/>
+            <TextBlock x:Name="localGovtTextBlock_output" HorizontalAlignment="Left" Margin="99,417,0,0" TextWrapping="Wrap" Text="Local Govt" VerticalAlignment="Top" FontFamily="Arial"/>
+            <TextBlock x:Name="billingTypeTextBlock" HorizontalAlignment="Left" Margin="171,109,0,0" TextWrapping="Wrap" Text="Billing Type" VerticalAlignment="Top" FontFamily="Arial" FontWeight="Bold"/>
+            <TextBlock x:Name="glAccountTextBlock" HorizontalAlignment="Left" Margin="171,126,0,0" TextWrapping="Wrap" Text="GL Account" VerticalAlignment="Top" FontFamily="Arial" FontWeight="Bold"/>
+            <TextBlock x:Name="billingTypeTextBlock_output" HorizontalAlignment="Left" Margin="260,109,0,0" TextWrapping="Wrap" Text="Fixed" VerticalAlignment="Top" FontFamily="Arial"/>
+            <TextBlock x:Name="glAccountTextBlock_output" HorizontalAlignment="Left" Margin="260,126,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Arial"/>
+            <TextBlock x:Name="clientTextBlock" HorizontalAlignment="Left" Margin="326,109,0,0" TextWrapping="Wrap" Text="Client" VerticalAlignment="Top" FontFamily="Arial" FontWeight="Bold"/>
+            <TextBlock x:Name="clientphoneTextBlock" HorizontalAlignment="Left" Margin="326,143,0,0" TextWrapping="Wrap" Text="Phone" VerticalAlignment="Top" FontFamily="Arial" FontWeight="Bold"/>
+            <TextBlock x:Name="faxTextBlock" HorizontalAlignment="Left" Margin="326,161,0,0" TextWrapping="Wrap" Text="Fax" VerticalAlignment="Top" FontFamily="Arial" FontWeight="Bold"/>
+            <TextBlock x:Name="addressTextBlock" HorizontalAlignment="Left" Margin="326,177,0,0" TextWrapping="Wrap" Text="Address" VerticalAlignment="Top" FontFamily="Arial" FontWeight="Bold"/>
+            <TextBlock x:Name="instrPersonTextBlock" HorizontalAlignment="Left" Margin="326,211,0,0" TextWrapping="Wrap" Text="Instr Person" VerticalAlignment="Top" FontFamily="Arial" FontWeight="Bold"/>
+            <TextBlock x:Name="personphoneTextBlock" HorizontalAlignment="Left" Margin="326,229,0,0" TextWrapping="Wrap" Text="Phone" VerticalAlignment="Top" FontFamily="Arial" FontWeight="Bold"/>
+            <TextBlock x:Name="mgaTruncationTextBlock" HorizontalAlignment="Left" Margin="326,263,0,0" TextWrapping="Wrap" Text="MGA Truncation" VerticalAlignment="Top" FontFamily="Arial" FontWeight="Bold"/>
+            <TextBlock x:Name="fld2TextBlock" HorizontalAlignment="Left" Margin="326,280,0,0" TextWrapping="Wrap" Text="Fld 2" VerticalAlignment="Top" FontFamily="Arial" FontWeight="Bold"/>
+            <TextBlock x:Name="architectEngineerTextBlock" HorizontalAlignment="Left" Margin="326,298,0,0" TextWrapping="Wrap" Text="Architect/Engineer" VerticalAlignment="Top" FontFamily="Arial" FontWeight="Bold"/>
+            <TextBlock x:Name="builderTextBlock" HorizontalAlignment="Left" Margin="326,314,0,0" TextWrapping="Wrap" Text="Builder" VerticalAlignment="Top" FontFamily="Arial" FontWeight="Bold"/>
+            <TextBlock x:Name="siteAccessViaTextBlock" HorizontalAlignment="Left" Margin="326,331,0,0" TextWrapping="Wrap" Text="Site Access via" VerticalAlignment="Top" FontFamily="Arial" FontWeight="Bold"/>
+            <TextBlock x:Name="contactNoTextBlock" HorizontalAlignment="Left" Margin="326,348,0,0" TextWrapping="Wrap" Text="Contact No:" VerticalAlignment="Top" FontFamily="Arial" FontWeight="Bold"/>
+            <TextBlock x:Name="ubdTextBlock" HorizontalAlignment="Left" Margin="326,385,0,0" TextWrapping="Wrap" Text="UBD Ref" VerticalAlignment="Top" FontFamily="Arial" FontWeight="Bold"/>
+            <TextBlock x:Name="orderInvoiceTextBlock" HorizontalAlignment="Left" Margin="326,400,0,0" TextWrapping="Wrap" Text="Order/Invoice No." VerticalAlignment="Top" FontFamily="Arial" FontWeight="Bold"/>
+            <TextBlock x:Name="qCloudRefTextBlock" HorizontalAlignment="Left" Margin="326,417,0,0" TextWrapping="Wrap" Text="Qcloud Ref No." VerticalAlignment="Top" FontFamily="Arial" FontWeight="Bold"/>
+            <TextBlock x:Name="postcodeTextBlock_output" HorizontalAlignment="Left" Margin="250,350,0,0" TextWrapping="Wrap" Text="0000" VerticalAlignment="Top" FontFamily="Arial"/>
+            <TextBlock x:Name="clientTextBlock_output" HorizontalAlignment="Left" Margin="377,109,0,0" TextWrapping="Wrap" Text="CLIENT CODE" VerticalAlignment="Top" FontFamily="Arial"/>
+            <TextBlock x:Name="clientphoneTextBlock_output" HorizontalAlignment="Left" Margin="437,143,0,0" TextWrapping="Wrap" Text="Phone" VerticalAlignment="Top" FontFamily="Arial"/>
+            <TextBlock x:Name="faxTextBlock_output" HorizontalAlignment="Left" Margin="437,161,0,0" TextWrapping="Wrap" Text="Fax" VerticalAlignment="Top" FontFamily="Arial"/>
+            <TextBlock x:Name="addressLine1TextBlock_output" HorizontalAlignment="Left" Margin="437,177,0,0" Text="Address Line 1 Address Line 1 Address Line 1 Address Line 1" VerticalAlignment="Top" FontFamily="Arial" Height="14" Width="316"/>
+            <TextBlock x:Name="instrPersonTextBlock_output" HorizontalAlignment="Left" Margin="437,211,0,0" TextWrapping="Wrap" Text="Instr Person" VerticalAlignment="Top" FontFamily="Arial"/>
+            <TextBlock x:Name="personphoneTextBlock_output" HorizontalAlignment="Left" Margin="437,229,0,0" TextWrapping="Wrap" Text="00 0000 0000" VerticalAlignment="Top" FontFamily="Arial"/>
+            <TextBlock x:Name="mgaTruncationTextBlock_output" HorizontalAlignment="Left" Margin="437,263,0,0" TextWrapping="Wrap" Text="MGA Truncation" VerticalAlignment="Top" FontFamily="Arial" Width="299"/>
+            <TextBlock x:Name="fld2TextBlock_output" HorizontalAlignment="Left" Margin="437,280,0,0" TextWrapping="Wrap" Text="Fld 2" VerticalAlignment="Top" FontFamily="Arial"/>
+            <TextBlock x:Name="architectEngineerTextBlock_output" HorizontalAlignment="Left" Margin="437,298,0,0" TextWrapping="Wrap" Text="Architect/Engineer" VerticalAlignment="Top" FontFamily="Arial"/>
+            <TextBlock x:Name="builderTextBlock_output" HorizontalAlignment="Left" Margin="437,314,0,0" TextWrapping="Wrap" Text="Builder" VerticalAlignment="Top" FontFamily="Arial"/>
+            <TextBlock x:Name="siteAccessViaTextBlock_output" HorizontalAlignment="Left" Margin="437,331,0,0" TextWrapping="Wrap" Text="Site Access via" VerticalAlignment="Top" FontFamily="Arial"/>
+            <TextBlock x:Name="contactNoTextBlock_output" HorizontalAlignment="Left" Margin="437,348,0,0" TextWrapping="Wrap" Text="Contact No:" VerticalAlignment="Top" FontFamily="Arial"/>
+            <TextBlock x:Name="orderInvoiceTextBlock_output" HorizontalAlignment="Left" Margin="437,400,0,0" TextWrapping="Wrap" Text="Order/Invoice No." VerticalAlignment="Top" FontFamily="Arial"/>
+            <TextBlock x:Name="qCloudRefTextBlock_output" HorizontalAlignment="Left" Margin="437,417,0,0" TextWrapping="Wrap" Text="00000" VerticalAlignment="Top" FontFamily="Arial"/>
+            <TextBlock x:Name="searchOrderedTextBlock" HorizontalAlignment="Left" Margin="326,367,0,0" TextWrapping="Wrap" Text="Search Ordered" VerticalAlignment="Top" FontFamily="Arial" FontWeight="Bold"/>
+            <TextBlock x:Name="searchOrderedTextBlock_output" HorizontalAlignment="Left" Margin="437,367,0,0" TextWrapping="Wrap" Text="Search Ordered" VerticalAlignment="Top" FontFamily="Arial"/>
+            <TextBlock x:Name="ubdTextBlock_output" HorizontalAlignment="Left" Margin="437,384,0,0" TextWrapping="Wrap" Text="UBD Ref" VerticalAlignment="Top" FontFamily="Arial"/>
+            <TextBlock x:Name="clientFullNameTextBlock_output" HorizontalAlignment="Left" Margin="326,126,0,0" TextWrapping="Wrap" Text="Client Full Name" VerticalAlignment="Top" FontFamily="Arial"/>
+            <TextBlock x:Name="personMobileTextBlock" HorizontalAlignment="Left" Margin="567,229,0,0" TextWrapping="Wrap" Text="Mobile" VerticalAlignment="Top" FontFamily="Arial" FontWeight="Bold"/>
+            <TextBlock x:Name="personMobileTextBlock_output" HorizontalAlignment="Left" Margin="615,229,0,0" TextWrapping="Wrap" Text="0000 000 000" VerticalAlignment="Top" FontFamily="Arial"/>
+            <TextBlock x:Name="addressLine2TextBlock_output" HorizontalAlignment="Left" Margin="437,193,0,0" TextWrapping="Wrap" Text="Address Line 2" VerticalAlignment="Top" FontFamily="Arial" Height="14" Width="219"/>
+            <TextBlock x:Name="clientMobileTextBlock" HorizontalAlignment="Left" Margin="567,146,0,0" TextWrapping="Wrap" Text="Mobile" VerticalAlignment="Top" FontFamily="Arial" FontWeight="Bold"/>
+            <TextBlock x:Name="clientmobileTextBlock_output" HorizontalAlignment="Left" Margin="615,146,0,0" TextWrapping="Wrap" Text="0000 000 000" VerticalAlignment="Top" FontFamily="Arial"/>
+            <TextBlock x:Name="refNoTextBlock" HorizontalAlignment="Left" Margin="567,109,0,0" TextWrapping="Wrap" Text="Ref No" VerticalAlignment="Top" FontFamily="Arial" FontWeight="Bold"/>
+            <TextBlock x:Name="refNoTextBlock_output" HorizontalAlignment="Left" Margin="615,109,0,0" TextWrapping="Wrap" Text="0000" VerticalAlignment="Top" FontFamily="Arial"/>
+            <TextBlock x:Name="specialDetailsTextBlock_output" HorizontalAlignment="Left" Margin="12,455,0,10" TextWrapping="Wrap" Text="line1&#x0a;line2&#x0a;line3&#x0a;line4" FontFamily="Arial" Width="724"/>
+            <TextBlock x:Name="jobTypeTextBlock" HorizontalAlignment="Left" Margin="439,60,0,0" TextWrapping="Wrap" Text="Job Type" VerticalAlignment="Top" FontFamily="Arial" FontWeight="Bold"/>
+            <TextBlock x:Name="jobTypeTextBlock_output" HorizontalAlignment="Left" Margin="496,60,0,0" TextWrapping="Wrap" Text="Spatial - Revit Model" VerticalAlignment="Top" FontFamily="Arial" Width="247"/>
+            <TextBlock x:Name="cmsAddressTextBlock" HorizontalAlignment="Left" Margin="326,10,0,0" TextWrapping="Wrap" Text="Property of:  CMS Surveyors Pty Ltd&#x0a;PO Box 463&#x0a;DEE WHY NSW 2099" VerticalAlignment="Top" FontFamily="Arial" Width="247" FontSize="8"/>
+            <TextBlock x:Name="cmsPhoneFaxTextBlock" Margin="660,10,10,0" TextWrapping="Wrap" Text="Phone 02 9971 4802&#xA;Fax 02 9971 4822" VerticalAlignment="Top" FontFamily="Arial" FontSize="8" TextAlignment="Right"/>
+            <TextBlock x:Name="clientPostcodeTextBlock_Output" HorizontalAlignment="Left" Margin="661,193,0,0" TextWrapping="Wrap" Text="0000" VerticalAlignment="Top" FontFamily="Arial"/>
+        </Grid>
+        <TextBlock x:Name="jobNumberLargeTextBlock" HorizontalAlignment="Right" Margin="0,6,37,0" TextWrapping="Wrap" Text="98765" VerticalAlignment="Top" FontSize="75" FontFamily="Segoe Script" RenderTransformOrigin="0.5,0.5">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="0.75"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <Button x:Name="closebutton" Content="X" HorizontalAlignment="Left" Height="25" Margin="1059,7,0,0" VerticalAlignment="Top" Width="24" Click="closebutton_Click"/>
+        <Rectangle HorizontalAlignment="Left" Height="297" Margin="793,174,0,0" VerticalAlignment="Top" Width="280" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.466"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <LinearGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                            <RotateTransform Angle="-4.236" CenterY="0.5" CenterX="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="#FFFFFFC1"/>
+                    <GradientStop Color="#FFFFFF87" Offset="0.879"/>
+                    <GradientStop Color="#FFFFFFC2" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <ScrollViewer x:Name="notesScrollViewer" HorizontalAlignment="Left" Height="264" Margin="801,177,0,0" VerticalAlignment="Top" Width="268" RenderTransformOrigin="0.5,0.5" VerticalScrollBarVisibility="Auto" Opacity="0.67">
+            <ScrollViewer.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.466"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ScrollViewer.RenderTransform>
+            <TextBox x:Name="notesTextBlock" TextWrapping="Wrap" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="14" AcceptsReturn="True" AcceptsTab="True" RenderTransformOrigin="0.5,0.5" Text="notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notesnotes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes notes ">
+                <TextBox.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-0.466"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </TextBox.RenderTransform>
+            </TextBox>
+        </ScrollViewer>
+        <ScrollViewer HorizontalAlignment="Left" Margin="24,637,0,10" Width="753" VerticalScrollBarVisibility="Auto">
+            <TextBlock x:Name="timesheetTextBlock" TextWrapping="Wrap" Text="Timesheet Entry Line 1&#x0a;TimeSheet Entry Line 2&#x0a;Timesheet Entry Line 3" FontSize="14"/>
+        </ScrollViewer>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="24,616,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="346"><Run FontWeight="Bold" FontSize="14" Text="Latest Time"/><Run FontWeight="Bold" FontSize="14" Text="sheet Entries"/><Run FontWeight="Bold" FontSize="14" Text=" "/></TextBlock>
+        <Rectangle HorizontalAlignment="Left" Height="52" Margin="805,110,0,0" VerticalAlignment="Top" Width="252" Fill="#FFFFAEF8" RadiusX="5" RadiusY="5"/>
+        <TextBlock x:Name="jobAssignedtextBlock" HorizontalAlignment="Left" Margin="835,114,0,0" TextWrapping="Wrap" Text="Job currently assigned to:" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
+        <TextBlock x:Name="firstNameLastNametextBlock_Output" HorizontalAlignment="Center" Margin="801,134,53,0" TextWrapping="Wrap" Text="Firstname Lastname" VerticalAlignment="Top" Width="236" TextAlignment="Center" FontSize="20" FontFamily="Calibri" FontStyle="Italic" RenderTransformOrigin="0.5,0.5">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="0.9"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <Button x:Name="reassign_button" Content="Re-assign" HorizontalAlignment="Left" Margin="1003,138,0,0" VerticalAlignment="Top" Width="49" FontSize="10" Opacity="0.8" MouseEnter="reassign_button_MouseEnter">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.132"/>
+                    <GradientStop Color="#FFFF77F3" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="saveNotesbutton" Content="Save" HorizontalAlignment="Left" Height="24" Margin="1018,442,0,0" VerticalAlignment="Top" Width="35" Opacity="0.7" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.608"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFFFFF96" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                    <GradientStop Color="#FFD3D37C" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Image x:Name="image_CMSlogo" HorizontalAlignment="Left" Height="62" Margin="364,71,0,0" VerticalAlignment="Top" Width="62" Source="Resources/CMS Logo1_Transparency.tif"/>
+
+    </Grid>
+</Window>
